@@ -1,0 +1,39 @@
+.container{
+  width: 200px;
+  height: 300px;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+  perspective: 100rem;
+
+}
+.card{
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-perspective: 0;
+  -webkit-transition: 1s;
+  backface-visibility: hidden;
+  visibility: visible;
+  transition: 1s;
+}
+.front{
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  background: blanchedalmond;
+  transform: rotateY(0deg);
+}
+.back{
+  width: 200px;
+  height: 300px;
+  background: aqua;
+  transform: rotateY(-180deg);
+}
+
+.container:hover .front{
+  transform: rotateY(180deg);
+}
+
+.container:hover .back{
+  transform: rotateY(0deg);
+}
